@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/css/soft-ui-dashboard.css';
+import './assets/css/soft-ui-dashboard.css.map';
+import './assets/css/soft-ui-dashboard.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
