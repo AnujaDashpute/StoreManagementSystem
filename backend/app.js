@@ -1,21 +1,17 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { User } = require('./models'); // import User model from index.js
+require('dotenv').config();
+
+const dbInjector = require('./middlewares/dbInjector');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(dbInjector); // inject Sequelize models into req.db
+app.use('/api/auth', authRoutes);
 
-// ✅ Route to test DB connection and model
-app.get('/test-db', async (req, res) => {
-  try {
-    const users = await User.findAll(); // Fetch all users
-    res.json(users); // Return users as JSON
-  } catch (err) {
-    console.error('Error fetching users:', err);
-    res.status(500).json({ message: 'Failed to fetch users', error: err.message });
-  }
-});
+
+// Example route
 
 module.exports = app;
