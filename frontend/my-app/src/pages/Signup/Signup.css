@@ -1,0 +1,46 @@
+/* Gradient Background for Signup Section */
+.signup-bg { 
+  /* background-image: linear-gradient(to right, #4b0082, #000000); */
+  background-image: linear-gradient(to right, #000000, #301934); 
+  border-radius: 15px;
+  color: white;
+  padding: 60px 0;
+}
+
+/* Spacing for heading */
+.signup-heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Input Hover and Focus Effects */
+.input-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-hover:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+  border-color: #007bff;
+}
+
+/* Card Animation on Hover */
+.animated-card {
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header h5 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Optional: global font setup */
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
